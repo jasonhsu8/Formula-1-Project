@@ -1,6 +1,6 @@
 import unittest
 import pandas as pd
-from myFunctions import read_data
+from myFunctions import read_data, dataset_folder_path
 
 class testFunction(unittest.TestCase):
 
