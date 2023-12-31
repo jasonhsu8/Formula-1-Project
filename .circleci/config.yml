@@ -8,9 +8,9 @@ jobs:
       - checkout
       - run:
           name: Install dependencies
-          command: 
-          pip install -r requirements.txt
-          pip install pandas
+          command: |
+            pip install -r requirements.txt
+            pip install pandas
       - run:
           name: Run tests
           command: pytest
