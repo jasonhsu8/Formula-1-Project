@@ -1,0 +1,65 @@
+raceId,circuitId,name,rating,year
+1094,32,Mexican Grand Prix,3.9,2022
+1081,73,Azerbaijan Grand Prix,5.03,2022
+1089,14,Italian Grand Prix,5.28,2022
+1092,22,Japanese Grand Prix,5.44,2022
+1078,79,Miami Grand Prix,5.63,2022
+1096,24,Abu Dhabi Grand Prix,5.65,2022
+1087,13,Belgian Grand Prix,5.68,2022
+1077,21,Emilia-Romagna Grand Prix,6.05,2022
+1080,6,Monaco Grand Prix,6.05,2022
+1085,34,French Grand Prix,6.3,2022
+1091,15,Singapore Grand Prix,6.45,2022
+1076,1,Australian Grand Prix,6.49,2022
+1088,39,Dutch Grand Prix,6.93,2022
+1082,7,Canadian Grand Prix,6.96,2022
+1079,12,Spanish Grand Prix,7.17,2022
+1086,11,Hungarian Grand Prix,7.68,2022
+1084,70,Austrian Grand Prix,7.81,2022
+1074,3,Bahrain Grand Prix,7.83,2022
+1075,77,Saudi Arabian Grand Prix,7.93,2022
+1093,69,United States Grand Prix,8.04,2022
+1095,18,Brazilian Grand Prix,8.2,2022
+1083,9,British Grand Prix,8.97,2022
+1063,13,Belgian Grand Prix,1.9,2021
+1056,6,Monaco Grand Prix,4,2021
+1058,70,Styrian Grand Prix,5.4,2021
+1070,32,Mexican Grand Prix,5.8,2021
+1072,77,Saudi Arabian Grand Prix,6.1,2021
+1054,75,Portuguese Grand Prix,6.2,2021
+1073,24,Abu Dhabi Grand Prix,6.3,2021
+1061,9,British Grand Prix,6.3,2021
+1051,78,Qatar Grand Prix,6.4,2021
+1064,39,Dutch Grand Prix,6.5,2021
+1055,12,Spanish Grand Prix,6.5,2021
+1067,5,Turkish Grand Prix,6.6,2021
+1060,70,Austrian Grand Prix,6.8,2021
+1069,69,United States Grand Prix,7.7,2021
+1057,73,Azerbaijan Grand Prix,7.8,2021
+1053,21,Emilia-Romagna Grand Prix,8.2,2021
+1059,34,French Grand Prix,8.3,2021
+1071,18,Brazilian Grand Prix,8.3,2021
+1065,14,Italian Grand Prix,8.4,2021
+1052,3,Bahrain Grand Prix,8.6,2021
+1062,11,Hungarian Grand Prix,8.7,2021
+1066,71,Russian Grand Prix,9,2021
+1017,34,French Grand Prix,3.5,2019
+1016,7,Canadian Grand Prix,4.4,2019
+1014,12,Spanish Grand Prix,4.6,2019
+1012,17,Chinese Grand Prix,4.8,2019
+1013,73,Azerbaijan Grand Prix,5.4,2019
+1030,24,Abu Dhabi Grand Prix,5.6,2019
+1025,71,Russian Grand Prix,5.8,2019
+1024,15,Singapore Grand Prix,6.2,2019
+1015,6,Monaco Grand Prix,6.3,2019
+1010,1,Australian Grand Prix,6.3,2019
+1027,32,Mexican Grand Prix,6.6,2019
+1026,22,Japanese Grand Prix,6.9,2019
+1022,13,Belgian Grand Prix,7.4,2019
+1021,11,Hungarian Grand Prix,8,2019
+1023,14,Italian Grand Prix,8.2,2019
+1011,3,Bahrain Grand Prix,8.5,2019
+1019,9,British Grand Prix,8.6,2019
+1029,18,Brazilian Grand Prix,8.8,2019
+1018,70,Austrian Grand Prix,8.9,2019
+1020,10,German Grad Prix,9.4,2019
