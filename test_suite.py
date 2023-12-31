@@ -1,7 +1,7 @@
 import unittest
 import pandas as pd
 import os
-from myFunctions import read_data, dataset_folder_path
+from read_data_function import read_data, dataset_folder_path
 
 class testFunction(unittest.TestCase):
     dataset_folder_path = 'Dataset/'
