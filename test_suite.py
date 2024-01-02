@@ -35,25 +35,29 @@ class testFunction(unittest.TestCase):
         # Clean up the sample file after the test
         os.remove(f"{dataset_folder_path}{sample_data}")
 
-if __name__ == '__main__':
-    unittest.main()
 
-
-
-class TestDnfCountFunction(unittest.TestCase):0
-
-dnf_counter = 0
-def test_dnf_count_1(self):
+class TestDnfCountFunction(unittest.TestCase):
+    def test_dnf_count(self):
         # Create a sample results DataFrame for testing
-        data = {'raceId': [1, 1, 1, 2, 2, 2],
-                'statusId': [1, 11, 4, 12, 1, 3]}
+        data = {'raceId': [1, 1, 1, 2, 2, 2, 3, 3, 3],
+                'statusId': [1, 11, 4, 200, 200, 200, 14, 120, 122]}
         results_df = pd.DataFrame(data)
 
-        # Test with a specific raceId (1 in this case)
-        result = dnf_count(results_df, 1)
+        # Test with a specific raceId
+        # 1
+        result1 = dnf_count(results_df, 1)
+        # 2
+        result2 = dnf_count(results_df, 2)
+        # 3
+        result3 = dnf_count(results_df, 3)
 
         # Assert that the result matches the expected value
-        self.assertEqual(result, 2)
+        # result1
+        self.assertEqual(result1, 1)
+        # result2
+        self.assertEqual(result2, 3)
+        # result3
+        self.assertEqual(result3, 0)
 
 if __name__ == '__main__':
     unittest.main()

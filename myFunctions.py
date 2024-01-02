@@ -21,5 +21,3 @@ def dnf_count(results_df, race_id_in_results):
             pass
 
     return dnf_counter
-
-#
