@@ -1,7 +1,7 @@
 import unittest
 import pandas as pd
 import os
-from myFunctions import read_data, dataset_folder_path
+from myFunctions import read_data, dataset_folder_path, dnf_count
 
 class testFunction(unittest.TestCase):
     dataset_folder_path = 'Dataset/'
@@ -39,3 +39,21 @@ if __name__ == '__main__':
     unittest.main()
 
 
+
+class TestDnfCountFunction(unittest.TestCase):0
+
+dnf_counter = 0
+def test_dnf_count_1(self):
+        # Create a sample results DataFrame for testing
+        data = {'raceId': [1, 1, 1, 2, 2, 2],
+                'statusId': [1, 11, 4, 12, 1, 3]}
+        results_df = pd.DataFrame(data)
+
+        # Test with a specific raceId (1 in this case)
+        result = dnf_count(results_df, 1)
+
+        # Assert that the result matches the expected value
+        self.assertEqual(result, 2)
+
+if __name__ == '__main__':
+    unittest.main()
