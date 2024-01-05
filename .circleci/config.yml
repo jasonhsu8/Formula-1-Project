@@ -11,6 +11,8 @@ jobs:
           command: |
             pip install -r requirements.txt
             pip install pandas
+            pip install matplotlib
+            pip install numpy
       - run:
           name: Run tests
           command: pytest
