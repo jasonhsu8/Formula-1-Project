@@ -2,7 +2,7 @@ import unittest
 import pandas as pd
 import numpy as np
 import os
-from myFunctions import read_data, dataset_folder_path, dnf_count, coef_linear_regression
+from myFunctions import read_data, dataset_folder_path, dnf_count, coef_linear_regression, correlation_coefficient
 
 class testFunction(unittest.TestCase):
     dataset_folder_path = 'Dataset/'
@@ -75,6 +75,24 @@ class TestCoefLinearReg(unittest.TestCase):
         result2 = coef_linear_regression(x2, y2)
         print(result2)
         self.assertTrue(np.allclose(result2, (1.0, 2.6), atol=1e-2), f"Test 2 failed: {result2}")
+
+class TestCorrelationCoefficient(unittest.TestCase):
+
+    def test_correlation_coefficient_case1(self):
+        x1 = np.array([1, 2, 3, 4, 5])
+        y1 = np.array([2, 4, 5, 4, 5])
+        result1 = correlation_coefficient(x1, y1)
+        expected1 = 0.8
+        print(result1)
+        self.assertTrue(np.allclose(result1, expected1, atol=1e-1), f"Test 1 failed: {result1}, expected: {expected1}")
+
+    def test_correlation_coefficient_case2(self):
+        x2 = np.array([0, 1, 2, 3, 4])
+        y2 = np.array([1, 3, 7, 9, 11])
+        result2 = correlation_coefficient(x2, y2)
+        expected2 = 1.0
+        print(result2)
+        self.assertTrue(np.allclose(result2, expected2, atol=1e-1), f"Test 2 failed: {result2}, expected: {expected2}")
 
 
 if __name__ == '__main__':
