@@ -1,7 +1,8 @@
 import unittest
 import pandas as pd
+import numpy as np
 import os
-from myFunctions import read_data, dataset_folder_path, dnf_count
+from myFunctions import read_data, dataset_folder_path, dnf_count, coef_linear_regression
 
 class testFunction(unittest.TestCase):
     dataset_folder_path = 'Dataset/'
@@ -59,5 +60,23 @@ class TestDnfCountFunction(unittest.TestCase):
         # result3
         self.assertEqual(result3, 0)
 
+class TestCoefLinearReg(unittest.TestCase):
+   def test_coef_linear_regression(self):
+        # Test 1
+        x1 = np.array([1, 2, 3, 4, 5])
+        y1 = np.array([2, 4, 5, 4, 5])
+        result1 = coef_linear_regression(x1, y1)
+        print(result1)
+        self.assertTrue(np.allclose(result1, (2.2, 0.6), atol=1e-2), f"Test 1 failed: {result1}")
+
+        # Test 2
+        x2 = np.array([0, 1, 2, 3, 4])
+        y2 = np.array([1, 3, 7, 9, 11])
+        result2 = coef_linear_regression(x2, y2)
+        print(result2)
+        self.assertTrue(np.allclose(result2, (1.0, 2.6), atol=1e-2), f"Test 2 failed: {result2}")
+
+
 if __name__ == '__main__':
     unittest.main()
+
