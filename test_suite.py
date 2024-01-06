@@ -2,7 +2,7 @@ import unittest
 import pandas as pd
 import numpy as np
 import os
-from myFunctions import read_data, dataset_folder_path, dnf_count, coef_linear_regression, correlation_coefficient
+from myFunctions import read_data, dataset_folder_path, dnf_count, coef_linear_regression, correlation_coefficient, overtaking_count
 
 class testFunction(unittest.TestCase):
     dataset_folder_path = 'Dataset/'
@@ -94,6 +94,19 @@ class TestCorrelationCoefficient(unittest.TestCase):
         print(result2)
         self.assertTrue(np.allclose(result2, expected2, atol=1e-1), f"Test 2 failed: {result2}, expected: {expected2}")
 
+
+class TestOvertakingCount(unittest.TestCase):
+
+    def test_overtaking_count_case1(self):
+        laptimes = pd.DataFrame({
+            'raceId': [1, 1, 1, 1, 2, 2, 2, 2],
+            'driverId': [1, 2, 3, 4, 1, 2, 3, 4],
+            'position': [1, 2, 3, 4, 4, 3, 2, 1]
+        })
+        race_id = 1
+        result = overtaking_count(laptimes, race_id)
+        expected = 2  # Adjust based on your data
+        self.assertEqual(result, expected, f"Test case 1 failed: {result}, expected: {expected}")
 
 if __name__ == '__main__':
     unittest.main()

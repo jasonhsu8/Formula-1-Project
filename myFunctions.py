@@ -61,3 +61,23 @@ def plot_regression_line(x,y,b):
     y_pred = b[0]+b[1]*x
     plt.plot(x, y_pred, color="g")
     plt.show()
+
+# overtaking_count function
+# For something to count as an "overtake", a driver changes their position between two consecutive laps. This would mean an "overtake" has occured.
+# Count this number then divide by 2 will give the number of overtakes as one overtake includes one driver gaining a position and the other losing a position.
+def overtaking_count(laptimes, race_id):
+    drivers = []
+    for driver in laptimes[laptimes.raceId == race_id].driverId:
+        if driver not in drivers:
+            drivers.append(driver)
+    
+    prev_pos = 0
+    overtakes = 0
+    for driver in drivers:
+        for lapPos in laptimes[(laptimes.raceId == race_id) & (laptimes.driverId == driver)].position:
+            if lapPos != prev_pos:
+                prev_pos = lapPos
+                overtakes = overtakes + 1
+                overtakings = overtakes/2
+                
+    return int(overtakings)
