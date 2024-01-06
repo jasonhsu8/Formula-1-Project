@@ -106,7 +106,7 @@ class TestOvertakingCount(unittest.TestCase):
         race_id = 1
         result = overtaking_count(laptimes, race_id)
         expected = 2
-        self.assertEqual(result, expected, f"Test case 1 failed: {result}, expected: {expected}")
+        self.assertEqual(result, expected, f"Test 1 failed: {result}, expected: {expected}")
 
 if __name__ == '__main__':
     unittest.main()
